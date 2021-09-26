@@ -1,6 +1,9 @@
-$blue: blue;
-.text {
-  &-blue {
-    color: $blue;
-  }
-}
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@100;300;400;500;600;700;800;900&display=swap');
+
+$brand-primary: #3A125B;
+$brand-primary-light: rgba(255, 255, 255, 0.1);
+$brand-success: #52E33C;
+$linear-gradient: linear-gradient(180deg, #F8861C 0%, #FE1290 100%);
+
+$im: !important;
+$font-family: 'Public Sans', sans-serif;

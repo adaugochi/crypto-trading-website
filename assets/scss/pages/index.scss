@@ -1,0 +1,82 @@
+body {
+  background-color: $brand-primary;
+  margin: 0;
+  padding: 0;
+  font-family: $font-family;
+  color: white;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+@media (min-width: 1400px) {
+  .container, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl {
+    max-width: 1135px;
+  }
+}
+
+.margin-b-51 {
+  margin-bottom: 51px;
+}
+
+.w {
+  &-inherit {
+    width: inherit;
+  }
+  &-web-fill {
+    width: -webkit-fill-available;
+  }
+}
+
+.hero-banner {
+  &__header-text {
+    font-weight: 500;
+    @include fslh(60px, 75px);
+    @include media-breakpoint-up(md) {
+      font-size: 64px;
+    }
+    margin-top: 72px;
+    margin-bottom: 201px;
+  }
+  &__text-wrapper {
+    margin-bottom: 125px;
+  }
+  &__text-section {
+    @include fslh(24px, 28px);
+  }
+  &__sub-text-section {
+    @include fslh(16px, 19px);
+  }
+}
+
+.focus-card {
+  height: 100%;
+  &__p {
+    &-lg {
+      padding: 56px 3rem;
+      @include media-breakpoint-up(lg) {
+        padding: 96px 87px 66px 110px;
+      }
+    }
+    &-md {
+      padding: 3rem 60px 41px 60px;
+      @include media-breakpoint-up(lg) {
+        padding: 64px 60px 41px 60px;
+      }
+    }
+  }
+  background-color: $brand-primary-light;
+  mix-blend-mode: normal;
+  &__small {
+    @include fslh(14px, 14px);
+    margin-bottom: 25px;
+  }
+  &__header {
+    @include fslh(32px, 40px);
+    font-weight: 500;
+    margin-bottom: 24px;
+  }
+  &__text {
+    @include fslh(16px, 19px);
+    margin-bottom: 56px;
+  }
+}
