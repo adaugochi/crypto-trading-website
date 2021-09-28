@@ -1,40 +1,40 @@
 .btn {
-  border-radius: 3px;
-  font-size: 14px;
-  line-height: 16px;
-  padding: 16px 20px;
-  cursor: pointer;
-  border: unset;
-  @include media-breakpoint-up(md) {
-    padding: 16px 24px;
-  }
-
-  &:focus {
-    box-shadow: unset $im;
-  }
-
-  &__lg {
-    border-radius: 5px;
-    padding: 40px 60px;
-    @include media-breakpoint-up(sm) {
-      padding: 40px 80px;
+    border-radius: 3px;
+    font-size: 14px;
+    line-height: 16px;
+    padding: 16px 20px;
+    cursor: pointer;
+    border: unset;
+    @include media-breakpoint-up(md) {
+        padding: 16px 24px;
     }
-    @include media-breakpoint-up(lg) {
-      padding: 40px 101px;
-    }
-  }
 
-  &-linear-gradient {
-    background: $linear-gradient;
-    color: $white;
-    &:hover {
-      color: $white;
+    &:focus {
+        box-shadow: unset $im;
     }
-  }
 
-  &-dark {
-    &-outline {
-      border: 1px solid $black;
+    &__lg {
+        border-radius: 5px;
+        padding: 40px 60px;
+        @include media-breakpoint-up(sm) {
+            padding: 40px 80px;
+        }
+        @include media-breakpoint-up(lg) {
+            padding: 40px 101px;
+        }
     }
-  }
+
+    &-linear-gradient {
+        background: $linear-gradient;
+        color: $white;
+        &:hover {
+            color: $white;
+        }
+    }
+
+    &-dark {
+        &-outline {
+            border: 1px solid $black;
+        }
+    }
 }

@@ -3,7 +3,9 @@
 $brand-primary: #3A125B;
 $brand-light: rgba(255, 255, 255, 0.1);
 $brand-success: #52E33C;
-$linear-gradient: linear-gradient(180deg, #F8861C 0%, #FE1290 100%);
+$brand-warning: #F8861C;
+$brand-pink: #FE1290;
+$linear-gradient: linear-gradient(180deg, $brand-warning 0%, $brand-pink 100%);
 
 $im: !important;
 $font-family: 'Public Sans', sans-serif;

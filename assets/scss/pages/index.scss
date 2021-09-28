@@ -1,145 +1,162 @@
 body {
-  background-color: $brand-primary;
-  margin: 0;
-  padding: 0;
-  font-family: $font-family;
-  color: white;
-  overflow-x: hidden;
-  overflow-y: auto;
+    background-color: $brand-primary;
+    margin: 0;
+    padding: 0;
+    font-family: $font-family;
+    color: white;
+    overflow-x: hidden;
+    overflow-y: auto;
 }
 
 @media (min-width: 1400px) {
-  .container, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl {
-    max-width: 1135px;
-  }
+    .container, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl {
+        max-width: 1135px;
+    }
+}
+
+a {
+    text-decoration: none;
 }
 
 .margin-b {
-  &-51 {
-    margin-bottom: 51px;
-  }
-  &-159 {
-    margin-bottom: 159px;
-  }
-  &-offset {
-    margin-bottom: -13rem;
-    @include media-breakpoint-up(md ){
-      margin-bottom: -11rem;
+    &-51 {
+        margin-bottom: 51px;
     }
-    @include media-breakpoint-up(lg) {
-      margin-bottom: -14rem;
+    &-159 {
+        margin-bottom: 159px;
     }
-    @include media-breakpoint-up(xl) {
-      margin-bottom: -17rem;
+    &-offset {
+        margin-bottom: -13rem;
+        @include media-breakpoint-up(md ){
+            margin-bottom: -11rem;
+        }
+        @include media-breakpoint-up(lg) {
+            margin-bottom: -14rem;
+        }
+        @include media-breakpoint-up(xl) {
+            margin-bottom: -17rem;
+        }
     }
-  }
 }
 
 .w {
-  &-inherit {
-    width: inherit;
-  }
-  &-web-fill {
-    width: -webkit-fill-available;
-  }
+    &-inherit {
+        width: inherit;
+    }
+    &-web-fill {
+        width: -webkit-fill-available;
+    }
 }
 
 .hero-banner {
-  &__header-text {
-    font-weight: 500;
-    @include fslh(60px, 75px);
-    @include media-breakpoint-up(md) {
-      font-size: 64px;
+    &__header-text {
+        font-weight: 500;
+        @include fslh(60px, 75px);
+        @include media-breakpoint-up(md) {
+            font-size: 64px;
+        }
+        margin-top: 72px;
+        margin-bottom: 201px;
     }
-    margin-top: 72px;
-    margin-bottom: 201px;
-  }
-  &__text-wrapper {
-    margin-bottom: 125px;
-  }
-  &__text-section {
-    @include fslh(24px, 28px);
-  }
-  &__sub-text-section {
-    @include fslh(16px, 19px);
-  }
+    &__text-wrapper {
+        margin-bottom: 125px;
+    }
+    &__text-section {
+        @include fslh(24px, 28px);
+    }
+    &__sub-text-section {
+        @include fslh(16px, 19px);
+    }
 }
 
 .focus-card {
-  height: 100%;
-  background-color: $brand-light;
-  mix-blend-mode: normal;
-  &__p {
-    &-lg {
-      padding: 56px 3rem;
-      @include media-breakpoint-up(lg) {
-        padding: 96px 87px 66px 110px;
-      }
+    height: 100%;
+    background-color: $brand-light;
+    mix-blend-mode: normal;
+    &__p {
+        &-lg {
+            padding: 56px 3rem;
+            @include media-breakpoint-up(lg) {
+                padding: 96px 87px 66px 110px;
+            }
+        }
+        &-md {
+            padding: 3rem 60px 41px 60px;
+            @include media-breakpoint-up(lg) {
+                padding: 64px 60px 41px 60px;
+            }
+        }
     }
-    &-md {
-      padding: 3rem 60px 41px 60px;
-      @include media-breakpoint-up(lg) {
-        padding: 64px 60px 41px 60px;
-      }
+    &__small {
+        @include fslh(14px, 14px);
+        margin-bottom: 25px;
     }
-  }
-  &__small {
-    @include fslh(14px, 14px);
-    margin-bottom: 25px;
-  }
-  &__header {
-    @include fslh(32px, 40px);
-    font-weight: 500;
-    margin-bottom: 24px;
-  }
-  &__text {
-    @include fslh(16px, 19px);
-    margin-bottom: 56px;
-  }
+    &__header {
+        @include fslh(32px, 40px);
+        font-weight: 500;
+        margin-bottom: 24px;
+    }
+    &__text {
+        @include fslh(16px, 19px);
+        margin-bottom: 56px;
+    }
 }
 
 .section-two {
-  &__header_text {
-    margin-top: 106px;
-    font-weight: 500;
-    @include fslh(64px, 75px);
-    margin-bottom: 21px;
-  }
+    &__header_text {
+        margin-top: 106px;
+        font-weight: 500;
+        @include fslh(64px, 75px);
+        margin-bottom: 21px;
+    }
 }
 
 .section-three {
-  &__header-text {
-    font-weight: 500;
-    @include fslh(60px, 75px);
-    @include media-breakpoint-up(md) {
-      font-size: 64px;
+    &__header-text {
+        font-weight: 500;
+        @include fslh(60px, 75px);
+        @include media-breakpoint-up(md) {
+            font-size: 64px;
+        }
+        margin-top: 23rem;
+        margin-bottom: 72px;
     }
-    margin-top: 23rem;
-    margin-bottom: 72px;
-  }
-  &__text-wrapper {
-    margin-bottom: 125px;
-  }
-  &__text-section {
-    @include fslh(24px, 28px);
-  }
-  &__sub-text-section {
-    @include fslh(16px, 19px);
-  }
+    &__text-wrapper {
+        margin-bottom: 125px;
+    }
+    &__text-section {
+        @include fslh(24px, 28px);
+    }
+    &__sub-text-section {
+        @include fslh(16px, 19px);
+    }
 }
 
 .section-four {
-  color: $black;
-  padding-top: 84px;
-  padding-bottom: 83px;
-  &__header-text {
-    font-weight: 500;
-    @include fslh(36px, 50px);
-    margin-bottom: 48px;
-  }
+    color: $black;
+    padding-top: 84px;
+    padding-bottom: 83px;
+    &__header-text {
+        font-weight: 500;
+        @include fslh(36px, 50px);
+        margin-bottom: 48px;
+    }
 }
 
 .footer {
-  padding-top: 90px;
-  padding-bottom: 85px;
+    color: $black;
+    padding-top: 90px;
+    padding-bottom: 85px;
+    &-socials {
+        .icon {
+            margin-left: 29px;
+        }
+    }
+    &-first {
+        padding-bottom: 77px;
+        border-bottom: 1px solid #bbb;
+    }
+    &-sub {
+        margin-top: 24px;
+    }
 }

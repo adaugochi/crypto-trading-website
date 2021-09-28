@@ -1,5 +1,8 @@
 .text {
-  &__success {
-    color: $brand-success;
-  }
+    &__success {
+        color: $brand-success;
+    }
+    &__warning {
+        color: $brand-warning;
+    }
 }

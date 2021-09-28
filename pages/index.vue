@@ -4,7 +4,7 @@
         <nav class="navbar navbar-light bg-white ">
             <div class="container">
                 <a class="navbar-brand" href="/">
-                  <img src="~/static/logo.png" alt="Logo"  class="d-inline-block align-text-top">
+                    <img src="~/static/logo.png" alt="Logo"  class="d-inline-block align-text-top">
                 </a>
                 <div class="mt-4 mt-sm-0">
                     <a class="btn btn-dark-outline px-4 px-md-5">Sign in</a>
@@ -169,17 +169,57 @@
                 <div class="row">
                     <div class="col-lg-7 col-md-10">
                         By submitting your information, you are agreeing to receive news, surveys, and special offers
-                        from Myddle Cafe Limited. <a href="#">Terms and Conditions, Privacy Policy</a>
+                        from Myddle Cafe Limited. <a href="#" class="text-primary">Terms and Conditions, Privacy Policy</a>
                     </div>
                 </div>
             </div>
         </section>
 
+        <!-- Footer -->
         <section class="footer bg-light">
             <div class="container">
-
+                <div class="row footer-first">
+                    <div class="col-lg-3 col-md-2 mb-5 mb-md-0">
+                        <a class="navbar-brand" href="/">
+                            <img src="~/static/footer-logo.png" alt="Logo"  class="d-inline-block align-text-top">
+                        </a>
+                    </div>
+                    <div class="col-md-4 offset-md-2 offset-lg-0 mb-5 mb-md-0">
+                        <p class="mb-4">
+                            Most secured peer-to-peer platform for your crypto-currency transactions
+                        </p>
+                        <p>Security as a Lifestyle</p>
+                    </div>
+                    <div class="col-md-4 offset-lg-1">
+                        <p>Connect with us</p>
+                        <div class="footer-socials">
+                            <i class="bi bi-facebook"></i>
+                            <i class="bi bi-twitter icon"></i>
+                            <i class="bi bi-instagram icon"></i>
+                        </div>
+                        <div class="d-flex mt-4">
+                            <i class="bi bi-telephone me-3"></i>
+                            <div>+233596921097, +233544315334, +233246207093</div>
+                        </div>
+                        <div class="d-flex mt-4">
+                            <i class="bi bi-envelope me-3"></i>
+                            <div>info@myddlecafe.com</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-flex justify-content-between footer-sub">
+                    <div>
+                        <span class="me-3">© 2021 Myddle Cafe Limited</span>
+                        <span>All rights reserved.</span>
+                    </div>
+                    <div class="text__warning">
+                        <span class="me-3"><a>Terms and Conditions  </a></span>
+                        <span><a>Privacy Policy</a></span>
+                    </div>
+                </div>
             </div>
         </section>
+        <!-- End Footer -->
     </div>
 </template>
 

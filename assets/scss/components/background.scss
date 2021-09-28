@@ -1,10 +1,10 @@
 .bg {
-  &-brand {
-    &-light {
-      background-color: $brand-light;
+    &-brand {
+        &-light {
+            background-color: $brand-light;
+        }
     }
-  }
-  &-light-gray {
-    background: rgba(196, 196, 196, 0.05);
-  }
+    &-light-gray {
+        background: rgba(196, 196, 196, 0.05);
+    }
 }
