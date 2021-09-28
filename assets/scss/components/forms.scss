@@ -1,0 +1,21 @@
+.form {
+  &-input {
+    background: rgba(196, 196, 196, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
+    border-radius: 5px;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    &:focus {
+      box-shadow: unset;
+      border: 1px solid $brand-primary;
+      padding-left: 60px;
+    }
+    &::placeholder {
+      padding-left: 60px;
+      font-weight: 300;
+      @include fslh(18px, 21px);
+      color: #C7C7C7;
+    }
+  }
+}

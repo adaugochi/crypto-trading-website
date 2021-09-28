@@ -44,7 +44,7 @@
             <div class="row">
                 <div class="col-12">
                     <div class="focus-card focus-card__p-lg">
-                        <div class="row gx-5">
+                        <div class="row gx-md-5">
                             <div class="col-md-6">
                                 <p class="focus-card__small text-uppercase">Focus</p>
                                 <h4 class=focus-card__header>
@@ -63,7 +63,7 @@
         </section>
 
         <section class="container margin-b-51">
-            <div class="row gx-3">
+            <div class="row gx-md-3">
                 <div class="col-md-5">
                     <div class="focus-card p-5">
                         <p class="focus-card__small text-uppercase">Focus</p>
@@ -83,11 +83,11 @@
             </div>
         </section>
 
-        <section class="container margin-b-51">
+        <section class="container margin-b-159">
             <div class="row">
                 <div class="col-md-7">
                     <div class="focus-card focus-card__p-md">
-                        <div class="row gx-5">
+                        <div class="row gx-md-5">
                             <div class="col-lg-7">
                                 <img src="~/static/design-1.png" alt="design" class="d-inline-block img-fluid">
                             </div>
@@ -109,6 +109,75 @@
                         </div>
                     </div>
                 </div>
+            </div>
+        </section>
+
+        <section class="bg-brand-light text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-9 col-lg-7 mx-auto">
+                        <h2 class="section-two__header_text">On capturing those awesome moments </h2>
+                        <p class="focus-card__text text__success mb-5">See how consumers transact</p>
+                        <div class="d-grid gap-2">
+                            <a class="btn btn-linear-gradient btn__lg margin-b-159">Get Started now</a>
+                        </div>
+                        <img src="~/static/design-2.png" alt="design" class="d-inline-block img-fluid w-web-fill margin-b-offset">
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="container">
+            <h2 class="section-three__header-text">
+                Let’s shape the future of crypto-currency in Africa
+            </h2>
+            <div class="row gy-5 section-three__text-wrapper">
+                <div class="col-md col-12">
+                    <h5 class="section-three__text-section">Buy with ease</h5>
+                    <p class="text__success section-three__sub-text-section">
+                        Kindly verify your profile to start doing more.
+                    </p>
+                </div>
+                <div class="col-md col-12 offset-md-1 offset-lg-1">
+                    <h5 class="section-three__text-section">Sell with ease </h5>
+                    <p class="text__success section-three__sub-text-section">
+                        Kindly verify your profile to start doing more.
+                    </p>
+                </div>
+                <div class="col-md col-12 offset-md-1 offset-lg-1">
+                    <h5 class="section-three__text-section">Security at its best</h5>
+                    <p class="text__success section-three__sub-text-section">
+                        Kindly verify your profile to start doing more.
+                    </p>
+                </div>
+            </div>
+      </section>
+
+        <section class="bg-white section-four">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-8 col-md-12">
+                        <h2 class="section-four__header-text">
+                            Get updates on industry innovations and the latest updates on our product
+                        </h2>
+                    </div>
+                </div>
+                <div class="mb-3 input-group">
+                    <input type="text" class="form-control form-input" name="email" placeholder="Enter your email here">
+                    <button class="btn btn-linear-gradient btn__lg">Subscribe</button>
+                </div>
+                <div class="row">
+                    <div class="col-lg-7 col-md-10">
+                        By submitting your information, you are agreeing to receive news, surveys, and special offers
+                        from Myddle Cafe Limited. <a href="#">Terms and Conditions, Privacy Policy</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="footer bg-light">
+            <div class="container">
+
             </div>
         </section>
     </div>
