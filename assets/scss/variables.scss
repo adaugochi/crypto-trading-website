@@ -1,11 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@100;300;400;500;600;700;800;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap');
 
 $brand-primary: #3A125B;
+$brand-body-color: #5E5E5E;
+$brand-dark: #1F1F1F;
 $brand-light: rgba(255, 255, 255, 0.1);
-$brand-success: #52E33C;
+$brand-success: #4CE16D;
 $brand-warning: #F8861C;
 $brand-pink: #FE1290;
 $linear-gradient: linear-gradient(180deg, $brand-warning 0%, $brand-pink 100%);
 
 $im: !important;
-$font-family: 'Public Sans', sans-serif;
+$font-family-public-sans: 'Public Sans', sans-serif;
+$font-family-montserrat: 'Montserrat', sans-serif;
+
+$font-normal: 14px;
+$font-md: 18px;

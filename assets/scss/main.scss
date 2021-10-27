@@ -1,8 +1,3 @@
-//@import "../../node_modules/bootstrap/scss/functions"; // Required
-//@import "../../node_modules/bootstrap/scss/variables"; // Required
-//@import "../../node_modules/bootstrap/scss/mixins"; // Required
-//@import "../../node_modules/bootstrap/scss/utilities"; // Required
-//@import "../../node_modules/bootstrap/scss/grid";
 @import "~bootstrap";
 
 @import "variables";
@@ -12,5 +7,6 @@
 @import "components/text";
 @import "components/background";
 @import "components/forms";
+@import "components/misc";
+@import "components/font";
 
-@import "pages/index";
