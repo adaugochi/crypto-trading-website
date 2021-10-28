@@ -2,3 +2,9 @@
     font-size: $fs;
     line-height: $lh;
 }
+
+@mixin inputIcon($url) {
+    background-image: $url;
+    background-repeat: no-repeat;
+    background-position: right 15px center;
+}

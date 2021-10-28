@@ -10,8 +10,22 @@ body {
 
 .wrapper {
     &-header {
-        background: url("./assets/images/Background.png") center no-repeat;
+        background: url("./assets/images/Background.svg") center no-repeat;
         background-size: cover;
+    }
+
+    .bg-bar-img {
+        background: url("./assets/images/bars.svg") center no-repeat;
+        background-size: cover;
+    }
+
+    .bg-explore-img {
+        background: url("./assets/images/craft.svg") center no-repeat;
+        background-size: cover;
+        .card {
+            padding: 40px 91px;
+            border-radius: 29px;
+        }
     }
 
     .navbar-border-bottom {
@@ -27,9 +41,13 @@ body {
 
         &__header {
             font-weight: 600;
-            font-size: 64px;
+            font-size: 44px;
             color: $brand-primary;
             margin-bottom: 48px;
+            @include media-breakpoint-up(lg) {
+                font-size: 64px;
+                line-height: normal;
+            }
         }
 
         &__text {
@@ -41,18 +59,38 @@ body {
     .why-choose-us {
 
         &__img {
-            width: 87px;
-            height: 81px;
+            height: 80px;
         }
 
         &__title {
             margin-bottom: 22px;
             margin-top: 29px;
-            font-size: 24px;
+            font-size: $font-lg;
         }
+    }
 
-        &__body {
-            @include fslh($font-md - 2px, 33px)
+    .tabs {
+        padding-top: 150px;
+        padding-bottom: 150px;
+        .nav-tabs {
+            border-bottom: unset;
+        }
+        #buy-coin-tab, #sell-coin-tab {
+            padding: 17px 50px;
+            border: unset;
+            &.active {
+                box-shadow: 5px 8px 72px -10px rgba(42, 7, 71, 0.12);
+                border-top-left-radius: 5px;
+                border-top-right-radius: 5px;
+            }
+        }
+        .tab-content {
+            position: relative;
+            box-shadow: 5px 8px 72px rgba(42, 7, 71, 0.12);
+            border-bottom-left-radius: 5px;
+            border-bottom-right-radius: 5px;
+            border-top-right-radius: 5px;
+            padding: 61px 30px 44px 30px;
         }
     }
 }

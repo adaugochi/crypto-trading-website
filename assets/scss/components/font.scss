@@ -1,3 +1,12 @@
-.fs-36 {
-    font-size: 36px;
+.fs {
+    &-36 {
+        font-size: 36px;
+    }
+    &-24 {
+        font-size: $font-lg;
+    }
+}
+
+.font-normal {
+    @include fslh($font-md - 2px, 33px)
 }

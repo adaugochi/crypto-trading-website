@@ -7,4 +7,7 @@
     &-light-gray {
         background: rgba(196, 196, 196, 0.05);
     }
+    &__primary {
+        background-color: $brand-primary;
+    }
 }
