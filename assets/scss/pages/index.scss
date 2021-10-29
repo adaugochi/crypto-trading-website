@@ -10,21 +10,25 @@ body {
 
 .wrapper {
     &-header {
-        background: url("./assets/images/Background.svg") center no-repeat;
+        background: url("./assets/images/Background.png") center no-repeat;
         background-size: cover;
     }
 
     .bg-bar-img {
         background: url("./assets/images/bars.svg") center no-repeat;
         background-size: cover;
+        min-height: 432px;
     }
 
     .bg-explore-img {
         background: url("./assets/images/craft.svg") center no-repeat;
         background-size: cover;
         .card {
-            padding: 40px 91px;
+            padding: 40px 16px;
             border-radius: 29px;
+            @include media-breakpoint-up(md) {
+                padding: 40px 91px;
+            }
         }
     }
 
@@ -91,6 +95,14 @@ body {
             border-bottom-right-radius: 5px;
             border-top-right-radius: 5px;
             padding: 61px 30px 44px 30px;
+            background-color: $white;
+        }
+    }
+
+    .footer {
+        p {
+            font-size: $font-normal - 2px;
+            color: #5D5D5D;
         }
     }
 }

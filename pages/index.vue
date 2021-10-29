@@ -26,6 +26,7 @@
                             cryptocurrency as easy as possible.
                         </p>
                         <a class="btn btn__primary btn__lg">Start trading</a>
+                        <div class="btn-shadow"></div>
                     </div>
                     <div class="col-md-6 mt-5 mt-md-0 align-self-center">
                         <img src="~/static/new/Group4.png" alt="design" class="d-inline-block img-fluid w-web-fill">
@@ -101,7 +102,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="offset-md-2 col-md-4">
+                    <div class="offset-md-1 offset-lg-2 col-md-5 col-lg-4">
                         <h2 class="fs-24 fw-500 pb-4 text__dark">Our Product</h2>
                         <p class="font-normal">
                             Myddle Cafe is a decentralized financial platform where buyers and sellers are can trade
@@ -115,7 +116,7 @@
 
         <!-- Other Services -->
         <div class="pdb-150">
-            <div class="container">
+            <div class="container bg-bar-img">
                 <div class="row">
                     <div class="col-lg-8 col-xl-6 col-md-10 mx-auto text-center">
                         <h2 class="fs-36 fw-500 pb-4 text__dark">Other Services</h2>
@@ -125,7 +126,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="bg-bar-img">
+                <div class="">
                     <div class="row gx-2 mt-5">
                         <div class="col-md-4" v-for="(service, index) in services" :key="index">
                             <img :src="require('~/static/new/' + service.imgPath)" alt="why" class="why-choose-us__img">
@@ -143,20 +144,60 @@
         <div class="bg-explore-img">
             <div class="container py-5">
                 <div class="row">
-                    <div class="col-md-10 mx-auto text-white text-center">
+                    <div class="col-lg-10 mx-auto text-white text-center">
                         <div class="card bg__primary">
-                            <h2 class="fw-500 fs-36">
-                                Get ready to explore the Crypto world
+                            <h2 class="fw-600 fs-36 lh-46">
+                                Get ready to explore the <br> Crypto world
                             </h2>
-                            <p>
+                            <p class="mt-4 mb-5 lh-33">
                                 We have a great platform where traders can interaction together about the coin or
-                                asset they plan on selling or buying as the case may be. <a class="fw-500">Sign up now</a>
+                                asset they plan on selling or buying as the case may be.
+                                <a class="fw-600 text-white text-decoration-none">Sign up now</a>
+                            </p>
+                            <div class="mb-3 input-group">
+                                <input type="text" class="form-control form-input form-input-group" name="email"
+                                       placeholder="Enter your Email Address">
+                                <button class="btn btn__primary-light">Sign Up Now</button>
+                            </div>
+                            <p class="lh-33">
+                                You will be the first set of persons to get <span class="fw-600 text-white">notified</span>
+                                when we launch
                             </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+
+        <!-- Footer -->
+        <section class="footer pb-5 pdt-150">
+            <div class="container">
+                <div class="mb-4">
+                    <a class="navbar-brand font-normal text__primary fw-500" href="/">
+                        Myddle cafe
+                    </a>
+                </div>
+                <div class="row footer-first">
+                    <div class="col-md-2 mb-5 mb-md-0">
+                        <p class="mb-5">
+                            Come join us as we head to the moon
+                        </p>
+                        <p>mail@email.com</p>
+                    </div>
+                    <div class="col-md-2 col-3">
+                        <p>Address</p>
+                        <p>FAQ</p>
+                        <p>Coin marketcap</p>
+                    </div>
+                    <div class="col-md-2 col-3 offset-6 mb-5 mb-md-0">
+                        <p>Twitter</p>
+                        <p>Facebook</p>
+                        <p>Whatsapp</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- End Footer -->
     </main>
 </template>
 
@@ -169,7 +210,7 @@ export default {
         return {
             offers: [
                 {
-                    imgPath: 'Group6.svg',
+                    imgPath: 'Group6.png',
                     title: 'Secure and transparent',
                     body: `Security is guaranteed. We also maintain privacy as well th quality of our product.
                         We provide transparent service, our system and eco-system can easily be monitored always`

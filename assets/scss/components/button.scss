@@ -11,12 +11,26 @@
         box-shadow: unset $im;
     }
 
+    &-shadow {
+        background: #160028;
+        opacity: 0.39;
+        filter: blur(51px);
+        padding: 20.5px 54.5px;
+        width: inherit;
+    }
+
     &__primary {
         background: $brand-primary;
         border: 1px solid $brand-primary;
         color: $white;
         &:hover {
             color: $white;
+        }
+        &-light {
+            background: #F3EEF3;
+            border-radius: 0 5px 5px 0;
+            color: $brand-primary;
+            font-weight: 600;
         }
     }
 

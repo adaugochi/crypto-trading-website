@@ -16,6 +16,19 @@
             position: relative;
         }
 
+        &-group {
+            height: 64px;
+            color: #B3B3B3;
+            font-weight: normal;
+            font-size: $font-normal + 2px !important;;
+            background-color: white;
+            &::placeholder {
+                font-size: $font-normal + 2px !important;
+                line-height: 33px;
+                color: #B3B3B3;
+            }
+        }
+
         &-placeholder {
             position: absolute;
             z-index: 1;
@@ -49,6 +62,7 @@
         &:focus {
             border: 1px solid $off-white;
             outline: unset;
+            box-shadow: unset;
             &::placeholder {
                 color: transparent;
             }
