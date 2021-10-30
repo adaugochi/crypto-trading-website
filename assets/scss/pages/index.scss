@@ -8,12 +8,6 @@ body {
     overflow-y: auto;
 }
 
-@media (min-width: 1400px) {
-    .container, .container-sm, .container-md, .container-lg, .container-xl, .container-xxl {
-        max-width: 1135px;
-    }
-}
-
 .wrapper {
     &-header {
         background: url("./assets/images/Background.png") center no-repeat;
