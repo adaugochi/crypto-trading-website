@@ -1,4 +1,10 @@
 .form {
+    &-control {
+        &:focus {
+            box-shadow: unset;
+            outline: unset;
+        }
+    }
     &-input {
         display: block;
         width: 100%;
@@ -58,6 +64,7 @@
             color: $brand-gray;
             font-weight: 400;
             line-height: 30px;
+            vertical-align: bottom;
         }
         &:focus {
             border: 1px solid $off-white;

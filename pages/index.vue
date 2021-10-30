@@ -67,42 +67,114 @@
                             <li class="nav-item" role="presentation">
                                 <a class="nav-link active text-center" id="buy-coin-tab" data-bs-toggle="tab" data-bs-target="#buyCoin"
                                         type="button" role="tab" aria-controls="buy-coin" aria-selected="true">
-                                    <img src="~/static/new/buy-active.svg" alt="buy" height="24"><br>
-                                    <span class="text__dark mt-1">Buy coin</span>
+                                    <img src="~/static/new/buy-active.svg" alt="buy" height="34"><br>
+                                    <span class="text__dark mt-2">Buy coin</span>
                                 </a>
                             </li>
                             <li class="nav-item" role="presentation">
                                 <button class="nav-link" id="sell-coin-tab" data-bs-toggle="tab" data-bs-target="#sellCoin"
                                         type="button" role="tab" aria-controls="sell-coin" aria-selected="false">
-                                    <img src="~/static/new/sell-inactive.svg" alt="sell" height="24"><br>
-                                    <span class="text__dark mt-1">Sell coin</span>
+                                    <img src="~/static/new/sell-inactive.svg" alt="sell" height="34"><br>
+                                    <span class="text__dark mt-2">Sell coin</span>
                                 </button>
                             </li>
                         </ul>
                         <div class="tab-content" id="myTabContent">
                             <div class="tab-pane fade show active" id="buyCoin" role="tabpanel" aria-labelledby="buy-coin-tab">
-                                <input-field
-                                    placeholder="You buy"
-                                    value="1,000"
-                                />
-                                <input-field
-                                    placeholder="You get"
-                                    value="0.0027"
-                                />
+                                <div class="row gx-5">
+                                    <div class="col-md-7">
+                                        <input-field
+                                            placeholder="You buy"
+                                            value="1,000"
+                                        />
+
+                                        <div class="mb-4 d-flex">
+                                            <span class="fs-10 text__gray me-3">Buy coin via</span>
+                                            <select class="form-control-sm form-control">
+                                                <option value="bank-transfer">Bank transfer</option>
+                                                <option value="online">Online</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="fs-10 text__gray mb-4">
+                                            Payment confirmed
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <div>
+                                            <select class="form-input">
+                                                <option value="ghs">&#x1F1EC&#x1F1ED &nbsp; GHS</option>
+                                                <option value="btc">&#x20BF &nbsp; BTC</option>
+                                            </select>
+                                            <div class="fs-10 mt-1 text-center text__gray">
+                                                Ghana Fiat currency
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row gx-5">
+                                    <div class="col-md-7">
+                                        <input-field
+                                            placeholder="You get"
+                                            value="0.0027"
+                                        />
+                                        <div class="fs-10 text__gray ms-3 mt-0">
+                                            <span class="fw-bold">0.00GHS</span> transaction fee
+                                        </div>
+                                    </div>
+                                    <div class="col-md-5">
+                                        <div>
+                                            <select class="form-input">
+                                                <option value="btc">&#x20BF &nbsp; BTC</option>
+                                                <option value="ghs">&#x1F1EC&#x1F1ED &nbsp; GHS</option>
+                                            </select>
+                                            <div class="fs-10 mt-1 text-center text__gray">
+                                                Bitcoin
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="tab-pane fade" id="sellCoin" role="tabpanel" aria-labelledby="sell-coin-tab">
-                                <input-field
-                                    placeholder="You buy"
-                                    value="0.0027"
-                                />
-                                <input-field
-                                    placeholder="You get"
-                                    value="900"
-                                />
+                                <div class="row gx-5">
+                                    <div class="col-md-7">
+                                        <input-field
+                                            placeholder="You sell"
+                                            value="0.0027"
+                                        />
+                                    </div>
+                                    <div class="col-md-5">
+                                        <div>
+                                            <select class="form-input">
+                                                <option value="btc">&#x20BF &nbsp; BTC</option>
+                                                <option value="ghs">&#x1F1EC&#x1F1ED &nbsp; GHS</option>
+                                            </select>
+                                            <div class="fs-10 mt-1 text-center text__gray">Bitcoin</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row gx-5">
+                                    <div class="col-md-7">
+                                        <input-field
+                                            placeholder="You get"
+                                            value="900"
+                                        />
+                                    </div>
+                                    <div class="col-md-5">
+                                        <div>
+                                            <select class="form-input">
+                                                <option value="ghs">&#x1F1EC&#x1F1ED &nbsp; GHS</option>
+                                                <option value="btc">&#x20BF &nbsp; BTC</option>
+                                            </select>
+                                            <small class="fs-10 text__gray">Bitcoin</small>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <div class="offset-md-1 offset-lg-2 col-md-5 col-lg-4">
+                    <div class="offset-md-1 offset-lg-2 col-md-5 col-lg-4 pt-4">
                         <h2 class="fs-24 fw-500 pb-4 text__dark">Our Product</h2>
                         <p class="font-normal">
                             Myddle Cafe is a decentralized financial platform where buyers and sellers are can trade
