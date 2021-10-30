@@ -46,8 +46,8 @@
                         </p>
                     </div>
                 </div>
-                <div class="row gx-2 mt-5">
-                    <div class="col-md-4" v-for="(offer, index) in offers" :key="index">
+                <div class="row gx-3 mt-5">
+                    <div class="col-md-4 mt-4 mt-md-0" v-for="(offer, index) in offers" :key="index">
                         <img :src="require('~/static/new/' + offer.imgPath)" alt="why" class="why-choose-us__img">
                         <h5 class="fw-600 text__primary why-choose-us__title">
                             {{ offer.title }}
@@ -199,7 +199,7 @@
                 </div>
                 <div class="">
                     <div class="row gx-2 mt-5">
-                        <div class="col-md-4" v-for="(service, index) in services" :key="index">
+                        <div class="col-md-4 mt-4 mt-md-0" v-for="(service, index) in services" :key="index">
                             <img :src="require('~/static/new/' + service.imgPath)" alt="why" class="why-choose-us__img">
                             <h5 class="fw-600 text__primary why-choose-us__title">
                                 {{ service.title }}
