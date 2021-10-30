@@ -83,20 +83,17 @@
                             <div class="tab-pane fade show active" id="buyCoin" role="tabpanel" aria-labelledby="buy-coin-tab">
                                 <div class="row gx-5">
                                     <div class="col-md-7">
-                                        <input-field
-                                            placeholder="You buy"
-                                            value="1,000"
-                                        />
+                                        <input-field placeholder="You buy" value="1,000"/>
 
                                         <div class="mb-4 d-flex">
-                                            <span class="fs-10 text__gray me-3">Buy coin via</span>
+                                            <span class="fs-10 text__gray align-self-center w-50">Buy coin via</span>
                                             <select class="form-control-sm form-control">
                                                 <option value="bank-transfer">Bank transfer</option>
                                                 <option value="online">Online</option>
                                             </select>
                                         </div>
 
-                                        <div class="fs-10 text__gray mb-4">
+                                        <div class="fs-10 text__gray mb-4 align-self-center">
                                             Payment confirmed
                                         </div>
                                     </div>
@@ -115,10 +112,7 @@
 
                                 <div class="row gx-5">
                                     <div class="col-md-7">
-                                        <input-field
-                                            placeholder="You get"
-                                            value="0.0027"
-                                        />
+                                        <input-field placeholder="You get" value="0.0027"/>
                                         <div class="fs-10 text__gray ms-3 mt-0">
                                             <span class="fw-bold">0.00GHS</span> transaction fee
                                         </div>
@@ -139,10 +133,18 @@
                             <div class="tab-pane fade" id="sellCoin" role="tabpanel" aria-labelledby="sell-coin-tab">
                                 <div class="row gx-5">
                                     <div class="col-md-7">
-                                        <input-field
-                                            placeholder="You sell"
-                                            value="0.0027"
-                                        />
+                                        <input-field placeholder="You sell" value="0.0027"/>
+                                        <div class="mb-4 d-flex">
+                                            <span class="fs-10 text__gray align-self-center w-50">Sell coin via</span>
+                                            <select class="form-control-sm form-control">
+                                                <option value="bank-transfer">Bank transfer</option>
+                                                <option value="online">Online</option>
+                                            </select>
+                                        </div>
+
+                                        <div class="fs-10 text__gray mb-4 align-self-center">
+                                            Payment confirmed
+                                        </div>
                                     </div>
                                     <div class="col-md-5">
                                         <div>
@@ -156,10 +158,7 @@
                                 </div>
                                 <div class="row gx-5">
                                     <div class="col-md-7">
-                                        <input-field
-                                            placeholder="You get"
-                                            value="900"
-                                        />
+                                        <input-field placeholder="You get" value="900"/>
                                     </div>
                                     <div class="col-md-5">
                                         <div>
@@ -167,14 +166,14 @@
                                                 <option value="ghs">&#x1F1EC&#x1F1ED &nbsp; GHS</option>
                                                 <option value="btc">&#x20BF &nbsp; BTC</option>
                                             </select>
-                                            <small class="fs-10 text__gray">Bitcoin</small>
+                                            <div class="fs-10 mt-1 text-center text__gray">Ghana Fiat currency</div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="offset-md-1 offset-lg-2 col-md-5 col-lg-4 pt-4">
+                    <div class="offset-md-1 offset-lg-2 col-md-5 col-lg-4 mt-6">
                         <h2 class="fs-24 fw-500 pb-4 text__dark">Our Product</h2>
                         <p class="font-normal">
                             Myddle Cafe is a decentralized financial platform where buyers and sellers are can trade
