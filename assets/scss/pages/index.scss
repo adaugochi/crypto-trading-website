@@ -78,10 +78,26 @@ body {
         padding-bottom: 150px;
         .nav-tabs {
             border-bottom: unset;
+            .nav-link {
+                .img-active {
+                    display: none;
+                }
+                &.active {
+                    .img-inactive {
+                        display: none;
+                    }
+                    .img-active {
+                        display: unset;
+                    }
+                }
+            }
         }
         #buy-coin-tab, #sell-coin-tab {
-            padding: 17px 50px;
+            padding: 17px 32px;
             border: unset;
+            @include media-breakpoint-up(md) {
+                padding: 17px 50px;
+            }
             &.active {
                 box-shadow: 5px 8px 72px -10px rgba(42, 7, 71, 0.12);
                 border-top-left-radius: 5px;
@@ -96,6 +112,30 @@ body {
             border-top-right-radius: 5px;
             padding: 61px 30px 44px 30px;
             background-color: $white;
+        }
+
+        .lines {
+            margin-left: 16px;
+            margin-top: -20px;
+            margin-bottom: -95px;
+
+            .dot {
+                width: 5px;
+                height: 5px;
+                background: $brand-dark;
+                border-radius:7px;
+            }
+
+            .line{
+                height: 39px;
+                width: 1px;
+                background: $off-white;
+                margin-left: 2.3px;
+            }
+        }
+        .methods {
+            margin-left: 12px;
+            transform: translateY(-6px);
         }
     }
 

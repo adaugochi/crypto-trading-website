@@ -62,118 +62,71 @@
         <div class="tabs">
             <div class="container">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-lg-6 col-md-7">
                         <ul class="nav nav-tabs" id="myTab" role="tablist">
                             <li class="nav-item" role="presentation">
                                 <a class="nav-link active text-center" id="buy-coin-tab" data-bs-toggle="tab" data-bs-target="#buyCoin"
                                         type="button" role="tab" aria-controls="buy-coin" aria-selected="true">
-                                    <img src="~/static/new/buy-active.svg" alt="buy" height="34"><br>
+                                    <img src="~/static/new/buy-inactive.svg" alt="buy" height="34" class="img-inactive">
+                                    <img src="~/static/new/buy-active.svg" alt="buy" height="34" class="img-active"><br>
                                     <span class="text__dark mt-2">Buy coin</span>
                                 </a>
                             </li>
                             <li class="nav-item" role="presentation">
-                                <button class="nav-link" id="sell-coin-tab" data-bs-toggle="tab" data-bs-target="#sellCoin"
+                                <a class="nav-link text-center" id="sell-coin-tab" data-bs-toggle="tab" data-bs-target="#sellCoin"
                                         type="button" role="tab" aria-controls="sell-coin" aria-selected="false">
-                                    <img src="~/static/new/sell-inactive.svg" alt="sell" height="34"><br>
+                                    <img src="~/static/new/sell-active.svg" alt="sell" height="34" class="img-active">
+                                    <img src="~/static/new/sell-inactive.svg" alt="sell" height="34" class="img-inactive"><br>
                                     <span class="text__dark mt-2">Sell coin</span>
-                                </button>
+                                </a>
                             </li>
                         </ul>
                         <div class="tab-content" id="myTabContent">
                             <div class="tab-pane fade show active" id="buyCoin" role="tabpanel" aria-labelledby="buy-coin-tab">
-                                <div class="row gx-5">
+                                <div class="row gx-4 gx-lg-5">
                                     <div class="col-md-7">
                                         <input-field placeholder="You buy" value="1,000"/>
-
-                                        <div class="mb-4 d-flex">
-                                            <span class="fs-10 text__gray align-self-center w-50">Buy coin via</span>
-                                            <select class="form-control-sm form-control">
-                                                <option value="bank-transfer">Bank transfer</option>
-                                                <option value="online">Online</option>
-                                            </select>
-                                        </div>
-
-                                        <div class="fs-10 text__gray mb-4 align-self-center">
-                                            Payment confirmed
-                                        </div>
+                                        <payment-info label="Buy coin via"/>
                                     </div>
                                     <div class="col-md-5">
-                                        <div>
-                                            <select class="form-input">
-                                                <option value="ghs">&#x1F1EC&#x1F1ED &nbsp; GHS</option>
-                                                <option value="btc">&#x20BF &nbsp; BTC</option>
-                                            </select>
-                                            <div class="fs-10 mt-1 text-center text__gray">
-                                                Ghana Fiat currency
-                                            </div>
-                                        </div>
+                                        <select-field :options="currenciesGHS" hint="Ghana Fiat currency"/>
                                     </div>
                                 </div>
 
-                                <div class="row gx-5">
-                                    <div class="col-md-7">
+                                <div class="row gx-4 gx-lg-5">
+                                    <div class="col-md-7 mt-4 mt-md-0">
                                         <input-field placeholder="You get" value="0.0027"/>
                                         <div class="fs-10 text__gray ms-3 mt-0">
                                             <span class="fw-bold">0.00GHS</span> transaction fee
                                         </div>
                                     </div>
                                     <div class="col-md-5">
-                                        <div>
-                                            <select class="form-input">
-                                                <option value="btc">&#x20BF &nbsp; BTC</option>
-                                                <option value="ghs">&#x1F1EC&#x1F1ED &nbsp; GHS</option>
-                                            </select>
-                                            <div class="fs-10 mt-1 text-center text__gray">
-                                                Bitcoin
-                                            </div>
-                                        </div>
+                                        <select-field :options="currenciesBTC" hint="Bitcoin"/>
                                     </div>
                                 </div>
                             </div>
                             <div class="tab-pane fade" id="sellCoin" role="tabpanel" aria-labelledby="sell-coin-tab">
-                                <div class="row gx-5">
+                                <div class="row gx-4 gx-lg-5">
                                     <div class="col-md-7">
                                         <input-field placeholder="You sell" value="0.0027"/>
-                                        <div class="mb-4 d-flex">
-                                            <span class="fs-10 text__gray align-self-center w-50">Sell coin via</span>
-                                            <select class="form-control-sm form-control">
-                                                <option value="bank-transfer">Bank transfer</option>
-                                                <option value="online">Online</option>
-                                            </select>
-                                        </div>
-
-                                        <div class="fs-10 text__gray mb-4 align-self-center">
-                                            Payment confirmed
-                                        </div>
+                                        <payment-info label="Sell coin via"/>
                                     </div>
                                     <div class="col-md-5">
-                                        <div>
-                                            <select class="form-input">
-                                                <option value="btc">&#x20BF &nbsp; BTC</option>
-                                                <option value="ghs">&#x1F1EC&#x1F1ED &nbsp; GHS</option>
-                                            </select>
-                                            <div class="fs-10 mt-1 text-center text__gray">Bitcoin</div>
-                                        </div>
+                                        <select-field :options="currenciesBTC" hint="Bitcoin"/>
                                     </div>
                                 </div>
-                                <div class="row gx-5">
-                                    <div class="col-md-7">
+                                <div class="row gx-4 gx-lg-5">
+                                    <div class="col-md-7 mt-4 mt-md-0">
                                         <input-field placeholder="You get" value="900"/>
                                     </div>
                                     <div class="col-md-5">
-                                        <div>
-                                            <select class="form-input">
-                                                <option value="ghs">&#x1F1EC&#x1F1ED &nbsp; GHS</option>
-                                                <option value="btc">&#x20BF &nbsp; BTC</option>
-                                            </select>
-                                            <div class="fs-10 mt-1 text-center text__gray">Ghana Fiat currency</div>
-                                        </div>
+                                        <select-field :options="currenciesGHS" hint="Ghana Fiat currency"/>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="offset-md-1 offset-lg-2 col-md-5 col-lg-4 mt-6">
+                    <div class="offset-lg-2 col-md-5 col-lg-4 mt-6">
                         <h2 class="fs-24 fw-500 pb-4 text__dark">Our Product</h2>
                         <p class="font-normal">
                             Myddle Cafe is a decentralized financial platform where buyers and sellers are can trade
@@ -250,7 +203,7 @@
                 </div>
                 <div class="row footer-first">
                     <div class="col-md-2 mb-5 mb-md-0">
-                        <p class="mb-5">
+                        <p class="mb-4">
                             Come join us as we head to the moon
                         </p>
                         <p>mail@email.com</p>
@@ -274,9 +227,11 @@
 
 <script>
 import InputField from "../components/InputField";
+import SelectField from "../components/SelectField";
+import PaymentInfo from "../components/PaymentInfo";
 export default {
     name: "index",
-    components: {InputField},
+    components: {PaymentInfo, SelectField, InputField},
     data() {
         return {
             offers: [
@@ -317,6 +272,41 @@ export default {
                     body: `We also offer the option to swap coins with little or no charge involved with the click of a button.`
                 }
             ],
+            paymentMethods: [
+                {
+                    value: 'bank-transfer',
+                    name: 'Bank transfer'
+                },
+                {
+                    value: 'online',
+                    name: 'Online'
+                }
+            ],
+            currenciesGHS: [
+                {
+                    value: 'ghs',
+                    name: "&#x1F1EC&#x1F1ED &nbsp; GHS"
+                },
+                {
+                    value: 'btc',
+                    name: "&#x20BF &nbsp; BTC"
+                }
+            ],
+            currenciesBTC: [
+                {
+                    value: "btc",
+                    name: "&#x20BF &nbsp; BTC"
+                },
+                {
+                    value: "ghs",
+                    name: "&#x1F1EC&#x1F1ED &nbsp; GHS"
+                }
+            ]
+        }
+    },
+    methods: {
+        addActive: (event) => {
+            console.log(event.target)
         }
     }
 }
