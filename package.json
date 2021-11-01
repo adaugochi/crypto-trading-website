@@ -6,9 +6,9 @@
     "dev": "nuxt",
     "build": "nuxt build",
     "generate": "nuxt generate",
+    "heroku-postbuild": "npm run build",
     "start": "nuxt start",
-    "test": "jest",
-    "heroku-postbuild": "npm run build"
+    "test": "jest"
   },
   "dependencies": {
     "@nuxtjs/style-resources": "^1.2.1",
