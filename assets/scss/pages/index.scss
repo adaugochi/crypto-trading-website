@@ -45,13 +45,10 @@ body {
 
         &__header {
             font-weight: 600;
-            font-size: 44px;
+            font-size: 55px;
             color: $brand-primary;
+            line-height: 1.3em;
             margin-bottom: 48px;
-            @include media-breakpoint-up(lg) {
-                font-size: 64px;
-                line-height: normal;
-            }
         }
 
         &__text {
