@@ -8,7 +8,7 @@
                         <img src="~/static/logo.png" alt="Logo" class="d-inline-block align-text-top">
                     </a>
                     <div>
-                        <a class="btn btn__primary">Sign Up</a>
+                        <a class="btn btn__primary" href="#signup">Sign Up</a>
                     </div>
                 </div>
             </nav>
@@ -165,7 +165,7 @@
         </div>
 
         <!-- Explore -->
-        <div class="bg-explore-img">
+        <div class="bg-explore-img" id="signup">
             <div class="container py-5">
                 <div class="row">
                     <div class="col-lg-10 mx-auto text-white text-center">
@@ -178,11 +178,13 @@
                                 asset they plan on selling or buying as the case may be.
                                 <a class="fw-600 text-white text-decoration-none">Sign up now</a>
                             </p>
-                            <div class="mb-3 input-group">
-                                <input type="text" class="form-control form-input form-input-group" name="email"
-                                       placeholder="Enter your Email Address">
-                                <button class="btn btn__primary-light">Sign Up Now</button>
-                            </div>
+                            <form @submit.prevent="submitForm" name="submit-to-google-sheet">
+                                <div class="mb-3 input-group">
+                                    <input type="email" class="form-control form-input form-input-group" id="email"
+                                           placeholder="Enter your Email Address" name="email" v-model.trim="form.email">
+                                    <button class="btn btn__primary-light">Sign Up Now</button>
+                                </div>
+                            </form>
                             <p class="lh-33">
                                 You will be the first set of persons to get <span class="fw-600 text-white">notified</span>
                                 when we launch
@@ -229,11 +231,17 @@
 import InputField from "../components/InputField";
 import SelectField from "../components/SelectField";
 import PaymentInfo from "../components/PaymentInfo";
+import SheetDB from "sheetdb-js"
+import axios from "axios";
+
 export default {
     name: "index",
     components: {PaymentInfo, SelectField, InputField},
     data() {
         return {
+            form: {
+                email: '',
+            },
             offers: [
                 {
                     imgPath: 'Group6.png',
@@ -305,8 +313,46 @@ export default {
         }
     },
     methods: {
-        addActive: (event) => {
-            console.log(event.target)
+        submitForm: async function (event) {
+            if (event.type === 'submit') {
+                const now = Date.now();
+                let user = {
+                    date: new Date(now).toLocaleDateString("en-US"),
+                    time: new Date(now).toLocaleTimeString("en-US"),
+                    email: this.form.email
+                }
+
+                let saveUser = {
+                    data: [
+                        user
+                    ]
+                }
+
+                await SheetDB.read(process.env.SCRIPT_URL, {search: {email: user.email}})
+                    .then(result => {
+                        if (result.length > 0) {
+                            this.$toast.info('You already signup')
+                        } else {
+                            axios.post(process.env.SCRIPT_URL, saveUser)
+                                .then(response => {
+                                    if (response.status === 201) {
+                                        this.$toast.success(
+                                            'You have successfully signup into our platform.'
+                                        )
+                                    } else {
+                                        this.$toast.info('Something went wrong...')
+                                    }
+                                })
+                                .catch((err) => {
+                                    this.$toast.error(
+                                        'An error occurred while trying to send this request. Please reload the page and try again'
+                                    )
+                                })
+                        }
+                    }).catch(error => {
+                        this.$toast.error('Something went wrong...')
+                    });
+            }
         }
     }
 }
