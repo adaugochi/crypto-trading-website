@@ -182,7 +182,7 @@
                                 <div class="mb-3 input-group">
                                     <input type="email" class="form-control form-input form-input-group" id="email"
                                            placeholder="Enter your Email Address" name="email" v-model.trim="form.email">
-                                    <button class="btn btn__primary-light">Sign Up Now</button>
+                                    <button class="btn btn__primary-light">{{ btnText }}</button>
                                 </div>
                             </form>
                             <p class="lh-33">
@@ -239,6 +239,7 @@ export default {
     components: {PaymentInfo, SelectField, InputField},
     data() {
         return {
+            btnText: 'Sign Up Now',
             form: {
                 email: '',
             },
@@ -315,6 +316,7 @@ export default {
     methods: {
         submitForm: async function (event) {
             if (event.type === 'submit') {
+                this.btnText = 'Sending...'
                 const now = Date.now();
                 let user = {
                     date: new Date(now).toLocaleDateString("en-US"),
@@ -352,6 +354,8 @@ export default {
                     }).catch(error => {
                         this.$toast.error('Something went wrong...')
                     });
+                this.btnText = 'Sign Up Now';
+                this.form.email = '';
             }
         }
     }
