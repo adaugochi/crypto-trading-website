@@ -50,12 +50,21 @@ export default {
     modules: [
         '@nuxtjs/dotenv',
         '@nuxtjs/toast',
+        '@nuxtjs/recaptcha',
     ],
 
     toast: {
         position: 'top-right',
-        closeButton: true
+        duration: 3000,
     },
+
+    recaptcha: {
+        hideBadge: true, // Hide badge element (v3 & v2 via size=invisible)
+        siteKey: process.env.RECAPTCHA_SITE_KEY,
+        version: 3,     // Version
+        size: 'invisible'       // Size: 'compact', 'normal', 'invisible' (v2)
+    },
+
 
     // Build Configuration: https://go.nuxtjs.dev/config-build
     build: {

@@ -25,7 +25,7 @@
                             Ushering Africa into the digital age of payment by making
                             cryptocurrency as easy as possible.
                         </p>
-                        <a class="btn btn__primary btn__lg">Start trading</a>
+                        <a class="btn btn__primary btn__lg" href="#product-rate">Start trading</a>
                         <div class="btn-shadow"></div>
                     </div>
                     <div class="col-md-6 mt-5 mt-md-0 align-self-center">
@@ -59,7 +59,7 @@
         </div>
 
         <!-- Our Product -->
-        <div class="tabs">
+        <div class="tabs" id="product-rate">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-6 col-md-7">
@@ -313,51 +313,69 @@ export default {
             ]
         }
     },
+    async mounted() {
+        try {
+            await this.$recaptcha.init()
+        } catch (e) {
+            console.error(e);
+        }
+    },
     methods: {
         submitForm: async function (event) {
-            if (event.type === 'submit') {
-                this.btnText = 'Sending...'
-                const now = Date.now();
-                let user = {
-                    date: new Date(now).toLocaleDateString("en-US"),
-                    time: new Date(now).toLocaleTimeString("en-US"),
-                    email: this.form.email
-                }
+            try {
+                const token = await this.$recaptcha.execute('login')
 
-                let saveUser = {
-                    data: [
-                        user
-                    ]
-                }
+                if (event.type === 'submit' && token) {
+                    this.btnText = 'Sending...'
+                    const now = Date.now();
+                    let user = {
+                        date: new Date(now).toLocaleDateString("en-US"),
+                        time: new Date(now).toLocaleTimeString("en-US"),
+                        email: this.form.email
+                    }
 
-                await SheetDB.read(process.env.SCRIPT_URL, {search: {email: user.email}})
-                    .then(result => {
-                        if (result.length > 0) {
-                            this.$toast.info('You already signup')
-                        } else {
-                            axios.post(process.env.SCRIPT_URL, saveUser)
-                                .then(response => {
-                                    if (response.status === 201) {
-                                        this.$toast.success(
-                                            'You have successfully signup into our platform.'
+                    let saveUser = {
+                        data: [
+                            user
+                        ]
+                    }
+
+                    await SheetDB.read(process.env.SCRIPT_URL, {search: {email: user.email}})
+                        .then(result => {
+                            if (result.length > 0) {
+                                this.$toast.info('You already signup')
+                            } else {
+                                axios.post(process.env.SCRIPT_URL, saveUser)
+                                    .then(response => {
+                                        if (response.status === 201) {
+                                            this.$toast.success(
+                                                'You have successfully signup into our platform.'
+                                            )
+                                        } else {
+                                            this.$toast.info('Something went wrong...')
+                                        }
+                                    })
+                                    .catch((err) => {
+                                        this.$toast.error(
+                                            'An error occurred while trying to send this request. Please ' +
+                                            'reload the page and try again'
                                         )
-                                    } else {
-                                        this.$toast.info('Something went wrong...')
-                                    }
-                                })
-                                .catch((err) => {
-                                    this.$toast.error(
-                                        'An error occurred while trying to send this request. Please reload the page and try again'
-                                    )
-                                })
-                        }
-                    }).catch(error => {
-                        this.$toast.error('Something went wrong...')
-                    });
-                this.btnText = 'Sign Up Now';
-                this.form.email = '';
+                                    })
+                            }
+                        }).catch(error => {
+                            this.$toast.error('Something went wrong...')
+                        });
+                    this.btnText = 'Sign Up Now';
+                    this.form.email = '';
+                }
+
+            } catch (error) {
+                this.$toast.error('Validation fails...')
             }
         }
+    },
+    beforeDestroy() {
+        this.$recaptcha.destroy()
     }
 }
 </script>
